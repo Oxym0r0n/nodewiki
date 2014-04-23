@@ -129,7 +129,7 @@ io = socketio.listen(server);
 io.set('log level', 2);
 
 io.sockets.on('connection', function (socket){
-  var currentPath = process.cwd() + '/';
+  var currentPath = process.cwd() + '/wiki';
   var dir = getDir.getDir(currentPath);
   var links = getDir.parseLinks(dir);
   var directoryDepth = 0;
@@ -157,7 +157,7 @@ io.sockets.on('connection', function (socket){
 
   socket.on('disconnect', function(){
     // if a user disconnects, reinitialise variables
-    var currentPath = process.cwd() + '/';
+    var currentPath = process.cwd() + '/wiki';
     refreshDir();
     var links = getDir.parseLinks(dir);
     var directoryDepth = 0;
