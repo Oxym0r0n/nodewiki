@@ -10,7 +10,7 @@ var mdserver = require("./lib/mdserver");
 var getDir = require("./lib/getDir");
 
 // Defaults
-var portNumberDefault = process.env.PORT || 8888;
+var portNumberDefault = 8888;
 var listenAddr = process.env.NW_ADDR || "";    // "" ==> INADDR_ANY
 exports.gitMode = false;  // exported for lib/mdserver.js
 
